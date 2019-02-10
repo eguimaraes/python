@@ -16,3 +16,7 @@ def writeDsk(arq,msg):
     f = open(arqIn,"r")
     for x in f:
           print(x)   
+            
+def contaLinhas(arqIn):
+   count = len(open(arqIn).readlines(  ))
+   print(count)
