@@ -11,3 +11,8 @@ def writeDsk(arq,msg):
     filehandle = open(arq,'a')  
     filehandle.write(msg2w) 
     filehandle.close()  
+    
+    def carregarArquivo(arqIn):
+    f = open(arqIn,"r")
+    for x in f:
+          print(x)   
