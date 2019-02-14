@@ -1,3 +1,5 @@
+from numba import cuda, float32
+
 @cuda.jit
 def matmul(A, B, C):
     """Perform square matrix multiplication of C = A * B
