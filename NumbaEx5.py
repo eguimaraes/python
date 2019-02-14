@@ -5,6 +5,18 @@ from numba import cuda, float32
 TPB = 16
 
 @cuda.jit
+def matmul(A, B, C):
+    """Perform square matrix multiplication of C = A * B
+    """
+    i, j = cuda.grid(2)
+    if i < C.shape[0] and j < C.shape[1]:
+        tmp = 0.
+        for k in range(A.shape[1]):
+            tmp += A[i, k] * B[k, j]
+        C[i, j] = tmp
+
+
+@cuda.jit
 def fast_matmul(A, B, C):
     # Define an array in the shared memory
     # The size and type of the arrays must be known at compile time
