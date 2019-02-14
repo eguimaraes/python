@@ -1,4 +1,5 @@
 from numba import cuda, float32
+TPB = 16
 
 @cuda.jit
 def matmul(A, B, C):
