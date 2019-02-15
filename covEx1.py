@@ -1,6 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
-%matplotlib inline
+
 
 plt.style.use('ggplot')
 plt.rcParams['figure.figsize'] = (12, 8)
@@ -13,3 +13,4 @@ X = np.vstack((x, y)).T
 plt.scatter(X[:, 0], X[:, 1])
 plt.title('Generated Data')
 plt.axis('equal');
+plt.show()
