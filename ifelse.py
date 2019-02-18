@@ -27,3 +27,21 @@ break
 
 print x
 
+one_is_less_than_two = 1 < 2
+true_equals_false = True == False
+
+s = some_function_that_returns_a_string()
+if s:
+first_char = s[0]
+else:
+first_char = ""
+
+first_char = s and s[0]
+safe_x = x or 0
+
+all([True, 1, { 3 }])
+all([True, 1, {}])
+any([True, 1, {}])
+all([])
+any([])
+
