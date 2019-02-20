@@ -12,9 +12,9 @@ def getfriendsPlot(nrf,nrftf,nrtxr):
     ys = [friend_counts[x] for x in xs]
     plt.bar(xs, ys)
     plt.axis([0, nrf+1, 0, nrftf])
-    plt.title("Histogram of Friend Counts")
-    plt.xlabel("# of friends")
-    plt.ylabel("# of people")
+    plt.title("Histogram da Contagem de Amigos")
+    plt.xlabel("# de Amigos")
+    plt.ylabel("# of Pessoas")
     plt.show()
 
 
