@@ -3,9 +3,9 @@ import math
 import matplotlib.pyplot as plt
 import random
 
-cores=["b","g","r","c","m","y","k","w"]
+cores=["b","g","r","c","m","y","k"]
 
-a=360
+a=1440
 eixoX=np.arange(a)    
 eixoy=[math.sin((i/180)*math.pi) for i in range(0,a)]
 plt.plot(eixoX,eixoy,"o",color=random.choice(cores))
