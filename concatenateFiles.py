@@ -7,8 +7,8 @@ def readBellTxt(prefix,i):
   
 
 def getBell(prefix,start,end):
-    sizeRow=31
-    sizeCollun=500
+    sizeRow=xxx
+    sizeCollun=xxx
     matrix=np.zeros((sizeRow,sizeCollun),dtype=float)
     print(matrix.size)
     print(matrix.shape)
