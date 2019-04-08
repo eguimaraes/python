@@ -1,0 +1,4 @@
+Rótulos de Linha	Contagem de Nr Comits	Contagem de Nr Comits2
+Downgrade	1773	33,28%
+Upgrade	3555	66,72%
+Total Geral	5328	100,00%
