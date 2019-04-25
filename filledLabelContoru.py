@@ -1,0 +1,16 @@
+import numpy as np
+import matplotlib.pyplot as plt
+xlist = np.linspace(-3.0, 3.0, 100)
+ylist = np.linspace(-3.0, 3.0, 100)
+X, Y = np.meshgrid(xlist, ylist)
+Z = np.sqrt(X**2 + Y**2)
+plt.figure()
+contour = plt.contourf(X, Y, Z)
+plt.clabel(contour, colors = 'k', fmt = '%2.1f', fontsize=12)
+c = ('#ff0000', '#ffff00', '#0000FF', '0.6', 'c', 'm')
+contour_filled = plt.contourf(X, Y, Z, colors=c)
+plt.colorbar(contour)
+plt.title('Filled Contours Plot')
+plt.xlabel('x (cm)')
+plt.ylabel('y (cm)')
+plt.show()
