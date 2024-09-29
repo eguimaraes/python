@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medidas de Dispersão: Teoria e Exemplos Práticos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        p {
+            margin-bottom: 1em;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 5px;
+            border-radius: 4px;
+            font-family: "Courier New", Courier, monospace;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 4px;
+            font-family: "Courier New", Courier, monospace;
+        }
+    </style>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+<h1>Medidas de Dispersão: Teoria e Exemplos Práticos</h1>
+
+<h2>Introdução (Nível Básico)</h2>
+<p>Em estatística, as <strong>medidas de dispersão</strong> indicam o quanto os dados estão espalhados em torno de uma medida central (geralmente a média). Elas ajudam a entender a variabilidade dos dados e são fundamentais para uma análise completa de um conjunto de dados.</p>
+
+<h2>Principais Medidas de Dispersão</h2>
+<p>As principais medidas de dispersão são:</p>
+<ul>
+    <li>Amplitude</li>
+    <li>Variância</li>
+    <li>Desvio Padrão</li>
+    <li>Coeficiente de Variação</li>
+</ul>
+
+<h3>1. Amplitude</h3>
+<p>A <strong>amplitude</strong> é a diferença entre o valor máximo e o valor mínimo de um conjunto de dados. Ela oferece uma visão geral da variabilidade, mas não considera os valores intermediários.</p>
+<p><strong>Fórmula:</strong></p>
+<p>\[
+\text{Amplitude} = X_{\text{máx}} - X_{\text{mín}}
+\]</p>
+<p><strong>Exemplo na Indústria:</strong> Em uma linha de produção, os tempos medidos são 45, 47, 42, 46 e 43 segundos. A amplitude seria:</p>
+<p><em>Amplitude = 47 - 42 = 5 segundos</em></p>
+
+<h3>2. Variância</h3>
+<p>A <strong>variância</strong> mede a dispersão dos dados em torno da média. Quanto maior a variância, maior a dispersão.</p>
+<p><strong>Fórmula:</strong></p>
+<p>\[
+\sigma^2 = \frac{1}{n} \sum_{i=1}^{n} (X_i - \mu)^2
+\]</p>
+<p>onde \(\mu\) é a média, \(n\) é o número de observações, e \(X_i\) é cada valor individual.</p>
+<p><strong>Exemplo na Indústria:</strong> Se os tempos de produção forem 45, 47, 42, 46 e 43 segundos, calculamos a variância com a média de 44,6 segundos.</p>
+
+<h3>3. Desvio Padrão</h3>
+<p>O <strong>desvio padrão</strong> é a raiz quadrada da variância e fornece uma medida de dispersão na mesma unidade dos dados originais.</p>
+<p><strong>Fórmula:</strong></p>
+<p>\[
+\sigma = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (X_i - \mu)^2}
+\]</p>
+<p><strong>Exemplo na Indústria:</strong> Para os mesmos tempos de produção, o desvio padrão seria de 1,87 segundos.</p>
+
+<h3>4. Coeficiente de Variação</h3>
+<p>O <strong>coeficiente de variação</strong> é útil para comparar a dispersão entre dois conjuntos de dados com médias diferentes. Ele é o desvio padrão dividido pela média.</p>
+<p><strong>Fórmula:</strong></p>
+<p>\[
+CV = \frac{\sigma}{\mu} \times 100
+\]</p>
+<p><strong>Exemplo na Indústria:</strong> Em duas linhas de produção com médias de 10 e 50 segundos e desvio padrão de 5 segundos, o coeficiente de variação nos mostra a dispersão relativa de cada linha.</p>
+
+<h2>Conclusão (Nível Avançado)</h2>
+<p>As medidas de dispersão são fundamentais para entender a variabilidade dos dados em diversas áreas, como na indústria e nos esportes. Elas permitem uma análise mais completa e detalhada de como os dados estão distribuídos.</p>
+
+<h2>Exemplos em Python</h2>
+<p>Podemos usar bibliotecas como o <code>NumPy</code> para calcular essas medidas em Python.</p>
+
+<h3>Exemplo 1: Cálculo da Variância e Desvio Padrão</h3>
+<pre><code>import numpy as np
+
+# Dados de exemplo
+dados_producao = [45, 47, 42, 46, 43]
+
+# Cálculo da média
+media = np.mean(dados_producao)
+
+# Variância
+variancia = np.var(dados_producao)
+print(f'Variância: {variancia:.2f}')
+
+# Desvio Padrão
+desvio_padrao = np.std(dados_producao)
+print(f'Desvio Padrão: {desvio_padrao:.2f}')
+</code></pre>
+
+<h3>Exemplo 2: Cálculo da Amplitude</h3>
+<pre><code># Amplitude
+amplitude = max(dados_producao) - min(dados_producao)
+print(f'Amplitude: {amplitude}')
+</code></pre>
+
+</body>
+</html>
